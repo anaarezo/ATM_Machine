@@ -1,0 +1,117 @@
+.atm-wrapper{
+    margin: 30px auto;
+    background: #0c3b97;
+    max-width: 666px;
+    min-height: 495px;
+    .atm-header{
+        margin: 0 28px;
+        padding: 23px 0 0;
+        a{
+            font-weight: bolder;
+            font-size: 28px;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+    }
+    .atm-content{
+        margin: 28px 28px 0;
+        padding: 23px 0 0;
+        ul{
+            li{
+                width: 48%;
+                list-style-type: none;
+                display: inline-block;
+                margin: 4px 0px 0;
+                &:nth-child(5){
+                    width: calc(96% + 4px);
+                }
+                &:last-child{
+                    margin-top: 40px;
+                    width: calc(96% + 4px);
+                }
+                .btn{
+                    &.btn-cash{
+                        background-color:#01b4f6;
+                        border-radius: 0;
+                        width: 100%;
+                        height: 67px;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: bold;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                        &:before{
+                            content: '$ ';
+                        }
+                    }
+                    &.btn-get-money{
+                        background-color:#f6006b;
+                        border-radius: 0;
+                        width: 100%;
+                        height: 67px;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: normal;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                        &:after{
+                            content: ' >';
+                        }
+                    }
+                }
+                input{
+                    -webkit-appearance: none;
+                    -moz-appearance:    none;
+                    appearance:         none;
+                    border: 0;
+                    background-color:#2257bf;
+                    border-radius: 0;
+                    width: 100%;
+                    height: 67px;
+                    color: #ffffff;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    &:focus{
+                        border: 1px #01b4f6 solid;
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: #ffffff;
+                  }
+                  ::-moz-placeholder { /* Firefox 19+ */
+                    color: #ffffff;
+                  }
+                  :-ms-input-placeholder { /* IE 10+ */
+                    color: #ffffff;
+                  }
+                  :-moz-placeholder { /* Firefox 18- */
+                    color: #ffffff;
+                  }
+                  
+            }
+        }      
+    }
+    .atm-footer{
+        p{
+            display: none;
+            &.warning{
+                display: block;
+                color:red;
+            }
+        }
+    }
+}
+
+@media (min-width:768px){
+
+}
+
+@media (min-width:992px){
+    
+}
