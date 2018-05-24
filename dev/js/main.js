@@ -1,3 +1,4 @@
+// Verify if is a numeric value
 var validateValue = {
     init: function(){
         this.validateValue();
@@ -25,7 +26,7 @@ var withDraw = {
                 $(".info-extract").append("<p class='empty'>--------- Empty Field ---------</p>");
                 $('.atm-footer p').addClass('warning');
                 console.log('------ Empty Field ------');
-            }else{
+            }else if($('#txtInputWithdraw').val() % 10 === 0){
                 $("p.empty").remove();
                 $('.atm-footer p').removeClass('warning');
                 console.log('Informations:');
@@ -71,6 +72,12 @@ var withDraw = {
                         break;
                     }
                 }
+            }else if($('#txtInputWithdraw').val() <= 0){
+                console.log("You can't remove the value below zero.");
+                $(".info-extract").append("<p class='error-notes'>You can't remove the value below zero.</p>");
+            }else{
+                console.log('Value unavailable for withdrawal!');
+                $(".info-extract").append("<p class='error-notes'>Value unavailable for withdrawal!</p>");
             }
         });
     }
