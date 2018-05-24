@@ -25,7 +25,7 @@ var withDraw = {
                 console.log('------ Empty Field ------');
             // It's possible to withdraw this amount
             }else if($('#txtInputWithdraw').val() % 10 === 0){
-                console.log('Informations:');
+                console.log('Informations:'); 
                 $(".info-statement").append("<p class='value'>Informations:</p>");
                 console.log('Withdraw value: $ '+ money +',00');
                 $(".info-statement").append('<p>Withdraw value: $ '+ money +',00</p>');
