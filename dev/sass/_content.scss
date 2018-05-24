@@ -1,21 +1,22 @@
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+}
 .atm-wrapper{
-    margin: 30px auto;
-    background: #0c336fe0;
-    max-width: 666px;
+    margin: 0 auto;
+    background: #0c336f;
     min-height: 495px;
     height: 495px;
     text-align: center;
     padding: 28px;
-    position: absolute;
-    left:0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     color: #fff;
     .atm-header{
         display: block;
-        padding: 0 16px 50px;
+        padding: 0 16px 70px;
         a{
             font-weight: bolder;
             font-size: 28px;
@@ -49,109 +50,73 @@
             font-size: 20px;
             font-weight: bold;
         }
-        ul{
-            padding: 0;
-            li{
-                width: 48%;
-                list-style-type: none;
-                display: inline-block;
-                margin: 4px 0px 0;
-                padding: 2px;
-                &:nth-child(5){
-                    width: calc(96% + 4px);
+        .btn{
+            &.btn-get-money{
+                background-color:#00f662;
+                border-radius: 0;
+                width: 100%;
+                height: 67px;
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover{
+                    opacity: 0.8;
                 }
-                &:last-child{
-                    margin-top: 40px;
-                    width: calc(96% + 4px);
+                &:after{
+                    content: ' >';
                 }
-                .btn{
-                    &.btn-cash{
-                        background-color:#01b4f6;
-                        border-radius: 0;
-                        width: 100%;
-                        height: 67px;
-                        color: #ffffff;
-                        font-size: 20px;
-                        &:hover{
-                            opacity: 0.8;
-                        }
-                        &:before{
-                            content: '$ ';
-                        }
-                    }
-                    &.btn-get-money{
-                        background-color:#00f662;
-                        border-radius: 0;
-                        width: 100%;
-                        height: 67px;
-                        color: #ffffff;
-                        font-size: 20px;
-                        font-weight: bold;
-                        &:hover{
-                            opacity: 0.8;
-                        }
-                        &:after{
-                            content: ' >';
-                        }
-                    }
-                }
-                input{
-                    -webkit-appearance: none;
-                    -moz-appearance:    none;
-                    appearance:         none;
-                    border: 0;
-                    background-color:#2257bf;
-                    border-radius: 0;
-                    width: 100%;
-                    height: 67px;
-                    color: #ffffff;
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-align: center;
-                    &:focus{
-                        border: 1px #01b4f6 solid;
-                        -webkit-box-shadow: none;
-                        box-shadow: none;
-                    }
-                }
-                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                    color: #ffffff;
-                  }
-                  ::-moz-placeholder { /* Firefox 19+ */
-                    color: #ffffff;
-                  }
-                  :-ms-input-placeholder { /* IE 10+ */
-                    color: #ffffff;
-                  }
-                  :-moz-placeholder { /* Firefox 18- */
-                    color: #ffffff;
-                  }
-                  
             }
-        }      
+        }
+        input{
+            margin: 20px 0 10px;
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;
+            border: 0;
+            background-color:#2f9bc2;
+            border-radius: 0;
+            width: 100%;
+            height: 100px;
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            &:focus{
+                border: 1px #01b4f6 solid;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+        ::-webkit-input-placeholder {
+            color: #ffffff;
+        }
+        ::-moz-placeholder {
+        color: #ffffff;
+        }
+        :-ms-input-placeholder {
+        color: #ffffff;
+        }
+        :-moz-placeholder {
+        color: #ffffff;
+        }     
     }
     .atm-footer{
         p{
             display: none;
-            &.warning{
-                display: block;
-                text-align: left;
-                color:rgb(248, 97, 97);
-            }
         }
     }
 }
-.extract{
-    width: 220px;
-    position: absolute;
-    padding: 10px;
+.statement{
+    width: 100%;
+    height: auto;
+    padding: 28px;
     font-size: 11px;
     top: 20px;
     right: 20px;
     background: #ffffff;
     color: #000;
     border-radius: 3px;
-    .info-extract{
+    .info-statement{
         .title{
             display: block;
             font-weight: bold;
@@ -162,14 +127,43 @@
         p{
             font-size: 14px;
             margin: 12px;
-            text-align: center;
+            text-align: left;
         }
+        
     }
 }
 @media (min-width:768px){
-
+    .container-fluid{
+        .container{
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    .atm-wrapper{
+        margin-top: 30px;
+        .atm-content{
+            input{
+                font-size: 38px;
+            }
+        }
+    }
 }
 
 @media (min-width:992px){
-    
+    .atm-wrapper{
+        max-width: 666px;
+        .atm-header{
+            padding: 0 16px 100px;
+        }
+    }
+    .statement{
+        padding: 15px;
+        position: absolute;
+        width: 220px;
+        .info-statement{
+            margin: 12px 0;
+        }
+    }
 }
