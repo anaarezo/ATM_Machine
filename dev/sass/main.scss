@@ -2,9 +2,12 @@
 ** -------------------------------------- */
 @import '_variables';
 @import '_content';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700,900');
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    //font-family: 'Open Sans', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     color: #ffffff;
+    background-image: url(../images/_bg/bg_body.jpg);
 }

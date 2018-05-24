@@ -1,28 +1,62 @@
 .atm-wrapper{
     margin: 30px auto;
-    background: #0c3b97;
+    background: #0c336fe0;
     max-width: 666px;
     min-height: 495px;
+    height: 495px;
+    text-align: center;
+    padding: 28px;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
     .atm-header{
-        margin: 0 28px;
-        padding: 23px 0 0;
+        display: block;
+        padding: 0 16px 50px;
         a{
             font-weight: bolder;
             font-size: 28px;
             color: #fff;
             text-decoration: none;
-            
+            float: left;
+        }
+        span{
+            text-align: right;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-size: 11px;
+            display: block;
+            padding: 10px 0 0;
         }
     }
     .atm-content{
-        margin: 28px 28px 0;
-        padding: 23px 0 0;
+        .title{
+            display: block;
+            color: #01b4f6;
+            text-align: left;
+            font-size: 15px;
+            &:nth-child(3){
+                margin-top: 15px;
+            }
+        }
+        .info{
+            display: block;
+            color:#ffffff;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+        }
         ul{
+            padding: 0;
             li{
                 width: 48%;
                 list-style-type: none;
                 display: inline-block;
                 margin: 4px 0px 0;
+                padding: 2px;
                 &:nth-child(5){
                     width: calc(96% + 4px);
                 }
@@ -38,7 +72,6 @@
                         height: 67px;
                         color: #ffffff;
                         font-size: 20px;
-                        font-weight: bold;
                         &:hover{
                             opacity: 0.8;
                         }
@@ -47,13 +80,13 @@
                         }
                     }
                     &.btn-get-money{
-                        background-color:#f6006b;
+                        background-color:#00f662;
                         border-radius: 0;
                         width: 100%;
                         height: 67px;
                         color: #ffffff;
                         font-size: 20px;
-                        font-weight: normal;
+                        font-weight: bold;
                         &:hover{
                             opacity: 0.8;
                         }
@@ -102,12 +135,37 @@
             display: none;
             &.warning{
                 display: block;
-                color:red;
+                text-align: left;
+                color:rgb(248, 97, 97);
             }
         }
     }
 }
-
+.extract{
+    width: 220px;
+    position: absolute;
+    padding: 10px;
+    font-size: 11px;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 3px;
+    .info-extract{
+        .title{
+            display: block;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            margin: 12px;
+            text-align: center;
+        }
+    }
+}
 @media (min-width:768px){
 
 }
