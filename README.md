@@ -23,4 +23,4 @@ $ npm run dev
 
 ## Author
 
-* **Ana Laura Arezo** - [E-mail](mailto:ana.laura.rodrigues@accenture.com) - [LinkedIn](https://www.linkedin.com/in/anaarezo/?locale=en_US)
+* **Ana Laura Arezo** - [E-mail](mailto:laura.arezo@gmail.com) - [LinkedIn](https://www.linkedin.com/in/anaarezo/?locale=en_US)
