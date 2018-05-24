@@ -22,97 +22,61 @@ var withDraw = {
             var money = $('#txtInputWithdraw').val();
             // Checks if the field is empty
             if($('#txtInputWithdraw').val() == ''){
+                $(".info-extract").append("<p class='empty'>--------- Empty Field ---------</p>");
                 $('.atm-footer p').addClass('warning');
                 console.log('------ Empty Field ------');
-                $(".info-extract").append("<p class='empty'>--------- Empty Field ---------</p>");
             }else{
                 $("p.empty").remove();
                 $('.atm-footer p').removeClass('warning');
-                console.log('------- Value here -------');
+                console.log('Informations:');
+                $(".info-extract").append("<p class='value'>Informations:</p>");
                 console.log('Withdraw value: $ '+ money +',00');
-                var monay = $('#txtInputWithdraw').val();
-                var notas100 = 0;
-                var notas50 = 0;
-                var notas20 = 0;
-                var notas10 = 0;
-                while (monay > 0) {
-                    if (monay > 100) {
-                        notas100 = Math.floor(monay/100);
-                        monay = monay % 100;
+                $(".info-extract").append('<p>Withdraw value: $ '+ money +',00</p>');
+                var cash = $('#txtInputWithdraw').val();
+                var notes100 = 0;
+                var notes50 = 0;
+                var notes20 = 0;
+                var notes10 = 0;
+                while (cash > 0) {
+                    if (cash > 100) {
+                        notes100 = Math.floor(cash/100);
+                        cash = cash % 100;
+                        console.log(notes100 +' notes of $ 100,00');
+                        $(".info-extract").append('<p>'+ notes100 +' notes of $ 100,00</p>');
                         continue;
                     }
-                    else if (monay > 50) {
-                        notas50 = Math.floor(monay/50);
-                        monay = monay % 50;
+                    else if (cash > 50) {
+                        notes50 = Math.floor(cash/50);
+                        cash = cash % 50;
+                        console.log(notes50 +' notes of $ 50,00');
+                        $(".info-extract").append('<p>'+ notes50 +' notes of $ 50,00</p>');
                         continue;
                     }
-                    else if (monay > 20) {
-                        notas20 = Math.floor(monay/20);
-                        monay = monay % 20;
+                    else if (cash > 20) {
+                        notes20 = Math.floor(cash/20);
+                        cash = cash % 20;
+                        console.log(notes20 + ' notes of $ 20,00');
+                        $(".info-extract").append('<p>'+ notes20 +' notes of $ 20,00</p>');
                         continue;
                     }
-                    else if (monay > 10) {
-                        notas10 = Math.floor(monay/10);
-                        monay = monay % 10;
+                    else if (cash > 10) {
+                        notes10 = Math.floor(cash/10);
+                        cash = cash % 10;
+                        console.log(notes10 + ' notes of $ 10,00');
+                        $(".info-extract").append('<p>'+ notes10 +' notes of $ 10,00</p>');
                         continue;
-                    }		
+                    }else if (cash < 10) {
+                        console.log('You can not withdraw this value! Choose a rounded value!');
+                        $(".info-extract").append('<p>You can not withdraw this value! Choose a rounded value!</p>');
+                        break;
+                    }
                 }
-                console.log('notas100:'+notas100);
-                console.log('notas50:'+notas50);
-                console.log('notas20:'+notas20);
-                console.log('notas10:'+notas10);
             }
         });
     }
 };
 
-/*
-var verifyNotes = {
-    init: function() {
-        this.verifyNotes();
-    },
-    verifyNotes: function(){
-        $('#btnGetMoney').click(function(){
-            //var monay = $('#txtInputWithdraw').val();
-            //var value = 490;
-            var monay = $('#txtInputWithdraw').val();
-            var notas100 = 0;
-            var notas50 = 0;
-            var notas20 = 0;
-            var notas10 = 0;
-            while (monay > 0) {
-                if (monay > 100) {
-                    notas100 = Math.floor(monay/100);
-                    monay = monay % 100;
-                    continue;
-                }
-                else if (monay > 50) {
-                    notas50 = Math.floor(monay/50);
-                    monay = monay % 50;
-                    continue;
-                }
-                else if (monay > 20) {
-                    notas20 = Math.floor(monay/20);
-                    monay = monay % 20;
-                    continue;
-                }
-                else if (monay > 10) {
-                    notas10 = Math.floor(monay/10);
-                    monay = monay % 10;
-                    continue;
-                }		
-            }
-            console.log('notas100:'+notas100);
-            console.log('notas50:'+notas50);
-            console.log('notas20:'+notas20);
-            console.log('notas10:'+notas10);
-        });
-    }
-}
-*/
-
 $(document).ready(function () {
     validateValue.init();
     withDraw.init();
-    //verifyNotes.init();
 });
